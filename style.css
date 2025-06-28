@@ -100,12 +100,14 @@ button:hover {
   background-color: rgba(30, 143, 255, 0.304);
   padding: 2px 6px;
   border-radius: 6px;
+  border: 3px solid dodgerblue;
 }
 .mandalorians {
   color: green;
   background-color: rgba(0, 128, 0, 0.256);
   padding: 2px 6px;
   border-radius: 6px;
+  border: 3px solid green;
 }
 .rebels {
   color: gold;
