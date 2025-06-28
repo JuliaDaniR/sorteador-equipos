@@ -6,7 +6,7 @@ const equipos = [
   { nombre: "Inquisitorius", clase: "inquisitorius" },
   { nombre: "Stormtrooper", clase: "stormtrooper" },
   { nombre: "Bad Batch", clase: "bad-batch" },
-  { nombre: "Woofiees", clase: "woofiees" },
+  { nombre: "Wookiees", clase: "wookiees" },
 ];
 
 let yaSorteado = false;
