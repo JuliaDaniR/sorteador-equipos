@@ -25,6 +25,7 @@ function sortearOrden() {
 
   yaSorteado = true;
   const sonido = document.getElementById("sonido");
+  const crash = document.getElementById("crash");
   const resultado = document.getElementById("resultado");
   const boton = document.getElementById("btnSortear");
   const mensaje = document.getElementById("mensajeFinal");
@@ -33,16 +34,12 @@ function sortearOrden() {
   const ordenSorteado = shuffle(equipos);
   let index = 0;
 
-  // 🔁 Reproducir el sonido en bucle
+  // 🔁 Iniciar tambor en bucle
   sonido.loop = true;
-  try {
-    sonido.currentTime = 0;
-    sonido.play().catch(() => {
-      console.warn("Sonido no pudo reproducirse automáticamente.");
-    });
-  } catch (e) {
-    console.warn("Error de sonido:", e);
-  }
+  sonido.currentTime = 0;
+  sonido.play().catch(() => {
+    console.warn("Sonido no pudo reproducirse automáticamente.");
+  });
 
   resultado.textContent = "¡Preparando el orden... 🚀";
   resultado.style.color = "";
@@ -51,10 +48,16 @@ function sortearOrden() {
     if (index >= ordenSorteado.length) {
       clearInterval(intervalo);
 
-      // 🛑 Detener el sonido en bucle
+      // 🛑 Detener tambor
       sonido.pause();
       sonido.currentTime = 0;
       sonido.loop = false;
+
+      // 🥁 Reproducir crash final
+      crash.currentTime = 0;
+      crash.play().catch(() => {
+        console.warn("Crash no pudo reproducirse.");
+      });
 
       resultado.textContent = "¡Orden definido!";
       resultado.style.color = "gold";
@@ -80,7 +83,8 @@ function sortearOrden() {
     slot.className = equipoActual.clase;
 
     index++;
-  }, 2500);
+  }, 3000);
 }
+
 
 
