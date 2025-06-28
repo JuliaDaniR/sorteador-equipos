@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorteador Alumnithon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main>
+    <img src="logo-alumnithon.png" alt="Alumnithon Logo" />
+    <div class="contenedor">
+      <!-- Sección de sorteo -->
+      <section class="sorteo">
+        <h1>Sorteador de Equipos</h1>
+        <div id="resultado">🎲 ¡Presioná para conocer el orden!</div>
+        <button id="btnSortear" onclick="sortearOrden()">Sortear Equipos</button>
+
+        <!-- Mensaje final -->
+        <div id="mensajeFinal" class="mensaje-oculto">
+          🌟 ¡A darlo todo en la presentación! Que la fuerza los acompañe 💫
+        </div>
+      </section>
+
+      <!-- Lista de orden -->
+      <section class="lista">
+        <h2>Orden de Presentación</h2>
+        <ol id="ordenFinal">
+          <li id="pos-1">1° - <span></span></li>
+          <li id="pos-2">2° - <span></span></li>
+          <li id="pos-3">3° - <span></span></li>
+          <li id="pos-4">4° - <span></span></li>
+          <li id="pos-5">5° - <span></span></li>
+          <li id="pos-6">6° - <span></span></li>
+          <li id="pos-7">7° - <span></span></li>
+          <li id="pos-8">8° - <span></span></li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <audio id="sonido" src="sonido-tambores.wav" preload="auto"></audio>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

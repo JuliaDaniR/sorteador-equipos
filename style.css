@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0e0e0e;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sorteo {
+  flex: 1;
+  text-align: center;
+  min-width: 350px;
+  padding-top: 20px;
+}
+
+#resultado {
+  font-size: 2em;
+  margin: 20px 0;
+  min-height: 60px;
+  transition: color 0.5s ease;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #ffffff20;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ffffff40;
+}
+
+.lista {
+  min-width: 280px;
+  max-width: 300px;
+  background: #1c1c1c;
+  border-radius: 12px;
+  padding: 20px;
+  height: fit-content;
+}
+
+.lista h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#ordenFinal {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#ordenFinal li {
+  font-size: 1.2em;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+#ordenFinal span {
+  font-weight: bold;
+  transition: opacity 0.5s ease;
+}
+
+/* Colores */
+.sith { color: red; }
+.jedi { color: dodgerblue; }
+.mandalorians { color: green; }
+.rebels { color: gold; }
+.inquisitorius {
+  color: black;
+  background-color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.stormtrooper { color: white; }
+.bad-batch { color: violet; }
+.woofiees { color: saddlebrown; }
+
+#mensajeFinal {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: rgb(15, 15, 12);
+  background-color: rgba(218, 165, 32, 0.6);
+  padding: 2rem;
+  border-radius: 10px 30px;
+  font-weight: bold;
+  max-width: 300px;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+#mensajeFinal.visible {
+  opacity: 1;
+}
+.mensaje-oculto {
+  height: 0;
+  overflow: hidden;
+}
+
+footer {
+  background-color: #111;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+footer img {
+  height: 40px;
+}
